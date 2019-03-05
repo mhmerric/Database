@@ -5,7 +5,7 @@ CREATE TABLE employee (
   first_name varchar(16),
   last_name varchar(16),
   employee_id integer NOT NULL,
-  active boolean NOT NULL DEFAULT TRUE, -- 1 for true, 0 for false
+  active boolean NOT NULL DEFAULT 1, -- 1 for true, 0 for false
   role varchar(16),
   manager integer,
   password varchar(16) NOT NULL,
