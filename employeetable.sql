@@ -13,7 +13,7 @@ CREATE TABLE employee (
   CONSTRAINT pk_employee PRIMARY KEY (record_id),
   CONSTRAINT fk_manager FOREIGN KEY (manager) REFERENCES employee(record_id),
   CONSTRAINT chk_employee_id CHECK (employee_id between 0 and 99999),
-  CONSTRAINT chk_role CHECK (role IN ('General Manager', 'Shift Manager', 'Cashier'))
+  CONSTRAINT chk_role CHECK (role IN ('General Manager', '', 'Shift Manager', 'Cashier'))
 );
                              
 INSERT INTO employee (first_name, last_name, employee_id, role, password) VALUES (
@@ -21,5 +21,4 @@ INSERT INTO employee (first_name, last_name, employee_id, role, password) VALUES
   , 'Bezos'
   , 1
   , 'General Manager'
-  , 'password' )
-RETURNING record_id, created_on;
+  , 'password' );
