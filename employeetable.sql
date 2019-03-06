@@ -8,7 +8,7 @@ CREATE TABLE employee (
   active boolean NOT NULL DEFAULT 1, -- 1 for true, 0 for false
   role varchar(16),
   manager integer,
-  password varchar(16) NOT NULL,
+  password varchar(100) NOT NULL, -- 100 to allow space for hashing
   created_on timestamp without time zone NOT NULL DEFAULT now(),
   CONSTRAINT pk_employee PRIMARY KEY (record_id),
   CONSTRAINT fk_manager FOREIGN KEY (manager) REFERENCES employee(record_id),
