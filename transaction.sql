@@ -18,8 +18,8 @@ CREATE TABLE transaction (
 DROP TABLE transaction_entry;
 
 CREATE TABLE transaction_entry (
-  product_id NOT NULL DEFAULT(0),
-  sale_id NOT NULL DEFAULT(0),
+  product_id int NOT NULL DEFAULT(0),
+  sale_id int NOT NULL DEFAULT(0),
   quanity integer NOT NULL,
   subtotal float,
   CONSTRAINT pk1_transaction_entry PRIMARY KEY (product_id),
