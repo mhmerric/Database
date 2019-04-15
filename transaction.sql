@@ -22,8 +22,7 @@ CREATE TABLE transaction_entry (
   sale_id int NOT NULL DEFAULT(0),
   quanity integer NOT NULL,
   subtotal float,
-  CONSTRAINT pk1_transaction_entry PRIMARY KEY (product_id),
-  CONSTRAINT pk2_transaction_entry PRIMARY KEY (sale_id)
+  CONSTRAINT pk1_transaction_entry PRIMARY KEY (product_id, sale_id)
 );
 
 CREATE TABLE customer (
