@@ -1,8 +1,8 @@
 
 
 CREATE TABLE inventory (
-    store_ID INT,
-    product_ID INT,
+    store_ID INT NOT NULL,
+    product_ID INT NOT NULL,
     quantity INT,
     CONSTRAINT PK_inventory PRIMARY KEY (store_ID, product_ID),
     CONSTRAINT CHK_quantity CHECK (quantity >= 0)
